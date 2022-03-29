@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/yebo_bicycle/static/css/main.2d63b0af.css",
-    "main.js": "/yebo_bicycle/static/js/main.4556f849.js",
+    "main.js": "/yebo_bicycle/static/js/main.0323dfdd.js",
     "static/js/787.13a88969.chunk.js": "/yebo_bicycle/static/js/787.13a88969.chunk.js",
     "static/media/bike1.jpg": "/yebo_bicycle/static/media/bike1.b68305f07b8389c8bd66.jpg",
     "static/media/bike6.jpg": "/yebo_bicycle/static/media/bike6.2ac61e44f7dd99e90ee4.jpg",
@@ -20,11 +20,11 @@
     "static/media/work_bike3_img2.jpg": "/yebo_bicycle/static/media/work_bike3_img2.9a45a75ecd6e5747e590.jpg",
     "index.html": "/yebo_bicycle/index.html",
     "main.2d63b0af.css.map": "/yebo_bicycle/static/css/main.2d63b0af.css.map",
-    "main.4556f849.js.map": "/yebo_bicycle/static/js/main.4556f849.js.map",
+    "main.0323dfdd.js.map": "/yebo_bicycle/static/js/main.0323dfdd.js.map",
     "787.13a88969.chunk.js.map": "/yebo_bicycle/static/js/787.13a88969.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2d63b0af.css",
-    "static/js/main.4556f849.js"
+    "static/js/main.0323dfdd.js"
   ]
 }
