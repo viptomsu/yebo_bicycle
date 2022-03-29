@@ -1,0 +1,69 @@
+@use '../../assets/scss/constants';
+@use '../../assets/scss/mixin';
+@use 'sass:map';
+
+.footer {
+	@include mixin.flexbox(space-between);
+	padding: 0 25rem;
+	min-height: 25rem;
+	background-color: constants.$grayBg;
+
+	p {
+		font: {
+			size: 1.4rem;
+			weight: 400;
+			style: italic;
+		}
+		line-height: 2.3rem;
+	}
+
+	& &__info {
+		color: constants.$textColor;
+		text-align: left;
+		&--name {
+			font: {
+				size: 1.6rem;
+				weight: 700;
+			}
+			line-height: 2.5rem;
+		}
+	}
+
+	&__brands {
+		@include mixin.flexbox($gap: 1.5rem);
+		.round-icon {
+			@include mixin.flexbox();
+			$size: 3.5rem;
+			width: $size;
+			height: $size;
+			box-sizing: border-box!important;
+			padding: .9rem;
+			color: constants.$textColor;
+			color: constants.$white;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		@each $brandName, $brandValue in constants.$brandColor {
+			.fa-#{$brandName} {
+				background-color: $brandValue;
+			}
+		}
+	}
+
+	&__credit {
+		@include mixin.flexbox($gap: .9rem);
+		color: constants.$textColor;
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 5.5rem;
+			height: 3.6rem;
+			background: {
+				image: url('../../assets/img/logos/author.png');
+				repeat: no-repeat;
+				size: cover;
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+@use '../../assets/scss/mixin';
+@use '../../assets/scss/constants';
+
+#shop {
+	align-items: stretch;
+	justify-content: stretch;
+	.shop__product {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		&--img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&--hover {
+			@include mixin.flexbox($col: true);
+			background-color: rgba(constants.$primaryColor, 0.8);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			transition: all 0.2s;
+			cursor: pointer;
+		}
+		&:hover > .shop__product--hover{
+			opacity: 1;
+		}
+	}
+	.shop__discover{
+		@include mixin.flexbox();
+		width: 100%;
+		min-height: 20rem;
+		background-color: constants.$darkBg;
+	}
+}

@@ -1,0 +1,11 @@
+$header_bg: url('../../assets/img/backgrounds/header_bg.jpg');
+
+.header {
+	display: flex;
+	width: 100%;
+	aspect-ratio: 2/1;
+	background: {
+		image: $header_bg;
+		size: cover;
+	}
+}

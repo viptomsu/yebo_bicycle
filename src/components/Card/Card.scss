@@ -1,0 +1,58 @@
+@use '../../assets/scss/mixin';
+@use '../../assets/scss/constants';
+@use "sass:math";
+
+.card {
+	$bg: constants.$white;
+	display: flex;
+	flex-direction: column;
+	&__content {
+		flex: 1;
+		background-color: $bg;
+		height: math.div(2, 3) * 100%;
+		padding: 0 6.7rem;
+		@include mixin.flexbox($col: true);
+		position: relative;
+		&::after {
+			$w: 1rem;
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -2rem;
+			border: {
+				color: transparent;
+				width: $w;
+				style: solid;
+				top-color: $bg;
+			}
+		}
+	}
+	&__title {
+		margin-top: 3.1rem;
+	}
+	&__desc {
+		@include mixin.flexbox();
+		position: relative;
+		margin-top: 2.6rem;
+		font: {
+			size: 1.6rem;
+			weight: 400;
+		}
+		text-align: justify;
+		line-height: 1.875;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: - 3.9rem;
+			width: 5rem;
+			height: 1px;
+			background-color: rgba(53, 55, 56, 0.2);
+		}
+	}
+	&__img{
+		display: block;
+		width: 100%;
+		aspect-ratio: 533 / 200;
+		object-fit: cover;
+	}
+}

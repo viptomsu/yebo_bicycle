@@ -1,0 +1,6 @@
+@use "sass:math";
+
+.logo {
+	display: block;
+	width: math.div(94, 1600) * 100vw;
+}

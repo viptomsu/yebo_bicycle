@@ -1,0 +1,11 @@
+@use '../../assets/scss/constants';
+
+.italic {
+	font: {
+		style: italic;
+		size: 2.4rem;
+		weight: 400;
+	}
+	color: constants.$textColor;
+	line-height: 1.7;
+}

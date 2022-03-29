@@ -1,0 +1,35 @@
+@use 'sass:math';
+@use '../../assets/scss/mixin';
+
+#work {
+	$basedFeaturedImg: 1067;
+	align-items: stretch;
+	.work__bike {
+		display: flex;
+		> .card {
+			flex: 1;
+		}
+		&--2{
+			.bike__featured-image{
+				order: 2;
+			}
+		}
+		&--3{
+			.bike__featured-image{
+				width: math.div(1600 - $basedFeaturedImg, 1600) * 100%;
+				aspect-ratio: 533/600;
+			}
+		}
+	}
+	.bike {
+		&__featured-image{
+			@include mixin.flexbox();
+			width: math.div($basedFeaturedImg, 1600) * 100%;
+			aspect-ratio: $basedFeaturedImg/600;
+			background: {
+				size: cover;
+				repeat: no-repeat;
+			}
+		}
+	}
+}

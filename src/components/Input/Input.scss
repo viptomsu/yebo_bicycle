@@ -1,0 +1,25 @@
+@use '../../assets/scss/constants';
+
+.input {
+	display: inline-block;
+	min-width: 40rem;
+	height: 7rem;
+	border: 1px solid constants.$grayBorder;
+	padding: 2.5rem;
+	outline: none;
+	color: constants.$textColor;
+	font: {
+		size: 2rem;
+		weight: 400;
+		style: italic;
+	}
+	&::placeholder {
+		color: #929292;
+		font: {
+			size: 2rem;
+			weight: 400;
+			style: italic;
+		}
+		line-height: 1.6;
+	}
+}

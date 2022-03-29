@@ -1,0 +1,6 @@
+@use '../../assets/scss/constants';
+
+.main p {
+	line-height: 1.875;
+	color: constants.$textColor;
+}

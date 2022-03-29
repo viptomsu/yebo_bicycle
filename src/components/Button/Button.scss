@@ -1,0 +1,33 @@
+@use '../../assets/scss/constants';
+
+.btn {
+	display: inline-block;
+	border: none;
+	outline: none;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: transparent;
+	font: {
+		size: 1.4rem;
+		weight: 700;
+	}
+	letter-spacing: 0.2em;
+	color: constants.$white;
+	height: 5.2rem;
+	padding: 0 4.6rem;
+	cursor: pointer;
+
+	&.btn--outline {
+		&:not(:disabled):hover{
+			border: 1px solid rgba(constants.$white, 0.5);
+		}
+	}
+	&.btn--primary {
+		font: {
+			size: 2.4rem;
+			weight: 300;
+		}
+		height: 7rem;
+		background-color: constants.$primaryColor;
+	}
+}

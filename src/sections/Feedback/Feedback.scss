@@ -1,0 +1,44 @@
+@use '../../assets/scss/constants';
+@use '../../assets/scss/mixin';
+@use 'sass:math';
+
+#feedback {
+	align-items: stretch;
+	justify-content: stretch;
+	> * {
+		flex: 1;
+	}
+	.feedback__content {
+		font-size: 1.8rem;
+		@include mixin.flexbox($col: true);
+		&--icon {
+			font-size: 3.2rem;
+			color: constants.$twitterColor;
+		}
+		&--title {
+			margin-top: 3.7rem;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+			color: constants.$sectionHeading;
+		}
+		&--time{
+			$leftSpace: 3.2rem;
+			display: inline-block;
+			position: relative;
+			font-weight: 300;
+			color: constants.$textColor;
+			margin-left: $leftSpace;
+			&::before {
+				content: '/';
+				position: absolute;
+				left: math.div(- $leftSpace - 1rem, 2);
+			}
+		}
+		&--detail {
+			max-width: 67%;
+			margin: auto{
+				top: 2.7rem;
+			}
+		}
+	}
+}

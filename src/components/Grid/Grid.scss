@@ -1,0 +1,30 @@
+@use 'sass:math';
+
+.grid {
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-template: {
+		columns: repeat(6, math.div(100%, 6));
+		rows: repeat(2, 50%);
+		areas:
+			"img1 img2 img3 img4 img5 img5"
+			"img6 img6 img3 img4 img7 img8";
+	};
+	&__item {
+		&.item-1, &.item-2, &.item-7, &.item-8{
+			aspect-ratio: 1/1;
+		}
+		&.item-3, &.item-4{
+			aspect-ratio: 1/2;
+		}
+		&.item-5, &.item-6{
+			aspect-ratio: 2/1;
+		}
+	}
+	@for $i from 1 through 7 {
+		.item-#{$i} {
+			grid-area: img#{$i};
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@use "sass:math";
+@use '../../assets/scss/mixin';
+
+.navbar{
+	$width: math.div(618, 1600) * 100%;
+	$gap: math.div(63, 1600) * 100vw;
+	width: $width;
+	min-width: max-content;
+	margin: auto {
+		top: 3.5rem;
+	}
+	@include mixin.flexbox($gap: $gap);
+	&__divider-carrier {
+		position: relative;
+		@include mixin.flexbox();
+		&::after {
+			content: '.';
+			pointer-events: none;
+			position: absolute;
+			right: calc(-1px - math.div($gap, 2));
+		}
+	}
+}

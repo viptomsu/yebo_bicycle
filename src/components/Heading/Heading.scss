@@ -1,0 +1,14 @@
+$headingColor: #4d4959;
+
+.heading {
+	font: {
+		size: 1.3rem;
+		weight: bold;
+	}
+	color: $headingColor;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	&--big {
+		font-size: 1.8rem;
+	}
+}

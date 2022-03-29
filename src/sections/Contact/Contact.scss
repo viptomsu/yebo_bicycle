@@ -1,0 +1,9 @@
+@use '../../assets/scss/constants';
+#contact {
+	background-color: constants.$white;
+	gap: 3.5rem;
+	.contact__form {
+		display: flex;
+		gap: .7rem;
+	}
+}

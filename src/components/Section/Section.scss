@@ -1,0 +1,12 @@
+@use '../../assets/scss/constants';
+@use '../../assets/scss/mixin';
+
+.section {
+	@include mixin.flexbox($col: true);
+	width: 100%;
+	min-height: 47rem;
+	background-color: constants.$grayBg;
+	.heading {
+		color: constants.$sectionHeading;
+	}
+}

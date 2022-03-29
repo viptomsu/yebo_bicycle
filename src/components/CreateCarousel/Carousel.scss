@@ -1,0 +1,26 @@
+@use '../../assets/scss/mixin';
+
+.carousel {
+	position: relative;
+	@include mixin.flexbox();
+	&__content {
+		display: flex;
+	}
+	&__controller {
+		@include mixin.flexbox(space-around, $gap: 9px);
+		position: absolute;
+		z-index: 1;
+		bottom: 6.8rem;
+		&-btn{
+			cursor: pointer;
+			width: 1.1rem;
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+			border: 1px solid #c8c8c8;
+			background-color: rgba(40,47,53,0);
+			&.active, &:hover {
+				background-color: #a9afb3;
+			}
+		}
+	}
+}
